@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    /* background-color: aqua; */
+    /* height: 600px; */
+    background-image: url(./empty-sea-beach-background.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.container {
+    align-self: center;
+    /* background-color: white; */
+    box-shadow: 5px 10px 20px yellow;
+    display: block;
+    margin: 120px auto;
+    width: 50%;
+}
+/* ul { */
+    /* margin: 0; */
+    /* border-left: 6px solid yellow; */
+    /* box-shadow: yellow; */
+    /* list-style-type:content: '\f12b'; */
+    /* padding: 0;
+}
+
+
+ul li {
+    /* cursor: pointer;
+    background-color: #62a8eb; */
+    position: relative;
+    padding: 12px 8px 40px;
+    font-size: 18px;
+    transition: 0,2s;
+    user-select: none;
+}
+
+ul li:hover {
+    background-color: #96DAE4;
+}
+
+ul li:nth-child(odd){
+    background-color: #CDEEAA;
+}
+
+ul li.checked {
+    background-color: turquoise;
+    color: white;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    content: "✔";
+    color: rgb(27, 9, 190);
+    position:absolute;
+    border: rgb(209, 16, 16) thick 15px;
+    /* border-color: ; */
+    border-style: solid;
+    /* border-width: 0 2px 2px 0; */
+    /* top: 10px;
+    left: 10px; */
+    /* transform:rotate(45deg); */
+    /* height: 15px;
+    width: 7px;
+} */
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #FFEDC6;
+    color: black;
+}
+.header {
+    background-color: teal;
+    padding: 30px 30px;
+    color: wheat;
+    text-align: center;
+}
+
+.header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+.addBtn {
+    background-color: blue;
+    /* display: table; */
+    float: left;
+    padding: 10px;
+    position:relative;
+    text-align: center;
+    width: 25%;
+    color: whitesmoke;
+    height: 38px;
+}
