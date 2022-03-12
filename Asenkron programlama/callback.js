@@ -34,15 +34,3 @@ newTodo({
 
 todoList();
 console.log(todos);
-
-// export default function () {
-//     console.log('We are all animals!');
-// }
-
-// export function cat() {
-//     console.log('Meeeow!');
-// }
-
-// export function dog() {
-//     console.log('Rufff!');
-// }
