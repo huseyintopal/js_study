@@ -14,7 +14,7 @@ const getApiUserList = async () => {
         const responseData = await axios({
             url:"https://reqres.in/api/users?page=1",
             method:"get", // burayı "post" yaparak ve aşağıya datayı ekleyerek post yapabiliriz.
-            // data:bodyData
+            // data:apiKey
         });
 
         const {data: userListArray } = responseData.data;

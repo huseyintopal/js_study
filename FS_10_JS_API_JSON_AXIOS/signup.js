@@ -37,9 +37,10 @@ const postCustumerRegister = async() =>{
             removeLoading();
         }
         else{
-            localStorage.setItem("baseUrl", EncryptStringAES("https://reqres.in"));
+            localStorage.setItem("baseUrl", EncryptStringAES("https://reqres.in")); //sessionStorage yaparak localde tutulmasını engelleybiriz sayfa kapatılınca.
             localStorage.setItem("apiKey", EncryptStringAES(userData.token));
             removeLoading();
+            // localStorage.removeItem("key");
             window.location.href = "userList.html";
         }
     }   
