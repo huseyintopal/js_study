@@ -2,17 +2,18 @@ const tbody = document.getElementById("tbodyUserList");
 // const loading = document.getElementById("loading");//Extension.js (bu sayfa html içine import edildi!) içinde hazır olan fonksiyonları kullanacağız gerek kalmadı.
 
 window.onload = () => {
+    // alert(`Your apiKey is: "${DecryptStringAES(localStorage.getItem("apiKey"))}"`);
     getApiUserList();
-    // setInterval(getApiUserList, 5000);
+    setInterval(getApiUserList, 5000); //
 }
 const getApiUserList = async () => {
     showLoading();
     //axios (npm install ile axios indirilecek veya cdn ile <script src="https://unpkg.com/axios/dist/axios.min.js"></script> gibi html içine eklenecek!!!)//
     try {
-        // const responseData = await axios("https://reqres.in/api/users?page=1");
+        // const responseData = await axios("https://reqres.in/api/users?page=1");//aşağıdaki yöntem daha kullanışlı diye bu yöntemi kullanmadık.
         const responseData = await axios({
             url:"https://reqres.in/api/users?page=1",
-            method:"get", // buraya "post" yaparak ve aşağıya datayı ekleyerek post yapabiliriz.
+            method:"get", // burayı "post" yaparak ve aşağıya datayı ekleyerek post yapabiliriz.
             // data:bodyData
         });
 

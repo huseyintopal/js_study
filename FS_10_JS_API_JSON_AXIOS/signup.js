@@ -18,8 +18,8 @@ const postCustumerRegister = async() =>{
         email:mail.value,
         password:password.value
     };
-    // console.log(JSON.stringify(bodyData)); 
-    // fetch yapsa isik bu şekilde yazacaktık strinfy yapmak zorundayız!
+    // console.log(JSON.stringify(bodyData)); //axios da gerek yok buna!!
+    // fetch yapsa idik bu şekilde yazacaktık stringfy yapmak zorundayız!
     console.log(bodyData);
 
     try {
@@ -40,7 +40,7 @@ const postCustumerRegister = async() =>{
             localStorage.setItem("baseUrl", EncryptStringAES("https://reqres.in"));
             localStorage.setItem("apiKey", EncryptStringAES(userData.token));
             removeLoading();
-        //     window.location.href = "userList.html";
+            window.location.href = "userList.html";
         }
     }   
     catch (error) {
