@@ -38,9 +38,13 @@ function DecryptStringAES(text) {
 }
 
 const showLoading = () => {
+
     loading.style.display = "block";
 }
 
 const removeLoading = () => {
-    loading.style.display = "none";
+    setTimeout(()=>{
+        loading.style.display = "none";
+    },1000)
+    
 }

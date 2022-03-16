@@ -10,6 +10,7 @@ window.addEventListener("load", ()=>{
 sbmtButton.addEventListener("click", e =>{
     postCustumerRegister();
 })
+// console.log(postCustomerRegister);// aşağıda tanımlanacak
 
 const postCustumerRegister = async() =>{
     // alert("customer data sended");
@@ -17,7 +18,10 @@ const postCustumerRegister = async() =>{
         email:mail.value,
         password:password.value
     };
-    // console.log(JSON.stringify(bodyData));
+    // console.log(JSON.stringify(bodyData)); 
+    // fetch yapsa isik bu şekilde yazacaktık strinfy yapmak zorundayız!
+    console.log(bodyData);
+
     try {
         showLoading();
         const response = await axios({
@@ -25,6 +29,7 @@ const postCustumerRegister = async() =>{
             method:"post",
             data:bodyData
         });
+        console.log(response);
         const {data:userData} = response;
         console.log(userData);
         if(userData.token == undefined){
@@ -35,12 +40,12 @@ const postCustumerRegister = async() =>{
             localStorage.setItem("baseUrl", EncryptStringAES("https://reqres.in"));
             localStorage.setItem("apiKey", EncryptStringAES(userData.token));
             removeLoading();
-            window.location.href = "userList.html";
+        //     window.location.href = "userList.html";
         }
-    } 
+    }   
     catch (error) {
         alert(error);
         removeLoading();
-
     }
-}
+    
+}    
