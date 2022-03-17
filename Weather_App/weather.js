@@ -20,8 +20,24 @@ const getWeatherdataFromApi = async()=>{
 
     try {
         const response = await axios(url);
-        console.log(response);
+        // console.log(response);
         const {main, name, sys, weather} = response.data;
+        // console.log(weather[0].icon);
+        //img url
+        const iconUrl = `https://openweathermap.org/img/wn/${
+            weather[0].icon}@2x.png`;
+        // console.log(iconUrl);
+        let createdcityCardLi = document.createElement("li");
+        createdcityCardLi.classList.add("city");`
+        <h2 class="city-name" data-name="${name}, ${sys.country}">
+            <span>${name}</span>
+            <sup>${sys.country}</sup>
+        </h2>
+        <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+        <figure>
+            <img class="city-icon" src="${iconUrl}">
+            <figcaption>${weather[0].description}</figcaption>
+        </figure>`;
 
     } 
     catch (error) {
@@ -29,5 +45,3 @@ const getWeatherdataFromApi = async()=>{
         
     }
 }
-
-
